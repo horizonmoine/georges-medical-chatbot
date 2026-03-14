@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f7fa;
+  color: $dark;
+  line-height: 1.6;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: $spacing-xxl;
+  color: $gray;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray-light;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray;
+  border-radius: $border-radius-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $gray-dark;
+}

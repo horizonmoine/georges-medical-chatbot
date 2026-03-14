@@ -1,0 +1,163 @@
+// ============================================
+// HEGP MEDICAL CHATBOT - SCSS VARIABLES
+// ============================================
+
+// Primary Colors
+$primary-color: #667eea;
+$primary-dark: #5568d3;
+$primary-light: #8099ff;
+$secondary-color: #764ba2;
+$secondary-dark: #5d3b7f;
+$secondary-light: #9566c2;
+
+// Gradient
+$gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+$gradient-success: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+
+// Status Colors
+$success-color: #27ae60;
+$success-light: #2ecc71;
+$success-dark: #229954;
+$error-color: #e74c3c;
+$error-light: #ec7063;
+$error-dark: #c0392b;
+$warning-color: #f39c12;
+$warning-light: #f5b041;
+$warning-dark: #d68910;
+$info-color: #3498db;
+$info-light: #5dade2;
+$info-dark: #2874a6;
+
+// Neutral Colors
+$white: #ffffff;
+$black: #000000;
+$dark: #2c3e50;
+$gray-darkest: #34495e;
+$gray-darker: #7f8c8d;
+$gray-dark: #95a5a6;
+$gray: #bdc3c7;
+$gray-light: #ecf0f1;
+$gray-lighter: #f8f9fa;
+$gray-lightest: #fcfcfc;
+
+// Background Colors
+$bg-primary: #f5f7fa;
+$bg-secondary: #ffffff;
+$bg-dark: #2c3e50;
+$bg-accent: #f0f3f7;
+
+// Text Colors
+$text-primary: #2c3e50;
+$text-secondary: #7f8c8d;
+$text-muted: #95a5a6;
+$text-disabled: #bdc3c7;
+$text-white: #ffffff;
+
+// Border Colors
+$border-color: #e0e0e0;
+$border-light: #f0f0f0;
+$border-dark: #d0d0d0;
+
+// Spacing System
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-xxl: 3rem;     // 48px
+$spacing-xxxl: 4rem;    // 64px
+
+// Border Radius
+$border-radius-xs: 2px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-xxl: 24px;
+$border-radius-full: 9999px;
+
+// Shadows
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 10px 40px rgba(0, 0, 0, 0.2);
+$shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+// Typography
+$font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family-mono: 'Courier New', Courier, monospace;
+
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-md: 1rem;      // 16px
+$font-size-lg: 1.125rem;  // 18px
+$font-size-xl: 1.25rem;   // 20px
+$font-size-2xl: 1.5rem;   // 24px
+$font-size-3xl: 2rem;     // 32px
+$font-size-4xl: 2.5rem;   // 40px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 2;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+$transition-all: all 0.3s ease;
+
+// Z-Index Scale
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Container Max Widths
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;
+
+// Component Specific
+$header-height: 64px;
+$sidebar-width: 280px;
+$footer-height: 80px;
+
+$input-height: 40px;
+$input-height-sm: 32px;
+$input-height-lg: 48px;
+
+$button-height: 40px;
+$button-height-sm: 32px;
+$button-height-lg: 48px;
+
+$card-padding: $spacing-lg;
+$modal-padding: $spacing-xl;
+
+// Animation Durations
+$animation-fast: 150ms;
+$animation-normal: 300ms;
+$animation-slow: 500ms;
