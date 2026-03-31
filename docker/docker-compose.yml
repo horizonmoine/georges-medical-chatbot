@@ -1,9 +1,13 @@
 version: '3.8'
 
 services:
+  # MongoDB is the FALLBACK database — only needed when DB_BACKEND=mongodb in .env
+  # To enable: remove the 'profiles' line, or run: docker-compose --profile mongodb up
   mongodb:
     image: mongo:7
     container_name: georges_mongodb
+    profiles:
+      - mongodb
     ports:
       - "27017:27017"
     volumes:
@@ -35,7 +39,6 @@ services:
     env_file:
       - ../.env
     depends_on:
-      - mongodb
       - elasticsearch
     restart: unless-stopped
 

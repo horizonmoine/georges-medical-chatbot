@@ -56,7 +56,7 @@ class BaseConfig:
     FRONTEND_URL = os.environ.get('FRONTEND_URL', 'http://localhost:3000')
 
     # Base de données backend
-    DB_BACKEND = os.environ.get('DB_BACKEND', 'mongodb')
+    DB_BACKEND = os.environ.get('DB_BACKEND', 'elasticsearch')
 
     @classmethod
     def validate(cls):
