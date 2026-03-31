@@ -77,7 +77,7 @@ def create_app(config_name='default'):
     app.security_manager = security_manager
 
     # ==================== Session Manager ====================
-    session_manager = SessionManager(session_timeout_minutes=30)
+    session_manager = SessionManager(session_timeout_minutes=5)
     app.session_manager = session_manager
 
     # ==================== Data Manager (MongoDB ou Elasticsearch) ====================

@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import { ROLE_LEVELS } from '@/utils/constants'
 
 export const useAuthStore = defineStore('auth', () => {
   // State
@@ -9,9 +10,14 @@ export const useAuthStore = defineStore('auth', () => {
 
   // Getters
   const isAuthenticated = computed(() => !!token.value && !!user.value)
-  const isAdmin = computed(() => user.value?.role === 'admin')
-  const isMedecin = computed(() => user.value?.role === 'medecin')
   const userRole = computed(() => user.value?.role || null)
+  const roleLevel = computed(() => ROLE_LEVELS[userRole.value] || 0)
+
+  // Rôles par niveau (spec: niv1-niv99)
+  const isMedecin = computed(() => roleLevel.value >= 2)   // niv2+
+  const isTester = computed(() => roleLevel.value >= 3)    // niv3+
+  const isAdmin = computed(() => ['admin', 'super_admin'].includes(userRole.value))
+  const isSuperAdmin = computed(() => userRole.value === 'super_admin') // niv99
 
   // Actions
   const setTokens = (accessToken, refreshTokenValue) => {
@@ -47,12 +53,15 @@ export const useAuthStore = defineStore('auth', () => {
     token,
     refreshToken,
     user,
-    
+
     // Getters
     isAuthenticated,
-    isAdmin,
-    isMedecin,
     userRole,
+    roleLevel,
+    isMedecin,
+    isTester,
+    isAdmin,
+    isSuperAdmin,
     
     // Actions
     setTokens,

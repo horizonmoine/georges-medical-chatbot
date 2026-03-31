@@ -2,10 +2,28 @@
  * Application constants
  */
 
+// Niveaux de rôles définis dans la spec
+// niv1: utilisateur/patient, niv2: médecin investigateur,
+// niv3: testeur ou admin projet, niv99: super administrateur
 export const ROLES = {
-  PATIENT: 'patient',
-  MEDECIN: 'medecin',
-  ADMIN: 'admin'
+  USER: 'user',           // niv1
+  MEDECIN: 'medecin',    // niv2
+  TESTER: 'tester',      // niv3
+  ADMIN: 'admin',        // niv3 - admin projet (détient la clé de chiffrement)
+  SUPER_ADMIN: 'super_admin' // niv99
+}
+
+export const ROLE_LEVELS = {
+  user: 1,
+  medecin: 2,
+  tester: 3,
+  admin: 3,
+  super_admin: 99
+}
+
+// Retourne true si le rôle a au moins le niveau requis
+export const hasRoleLevel = (userRole, minLevel) => {
+  return (ROLE_LEVELS[userRole] || 0) >= minLevel
 }
 
 export const SESSION_TIMEOUT = 5 * 60 * 1000 // 5 minutes
